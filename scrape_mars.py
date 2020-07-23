@@ -68,7 +68,7 @@ def scrape():
         "featured_image_url": featured_image_url,
         "mars_weather": new_twitter_list[0],
         "mars_table_html": mars_table_html,
-        "hemisphers": hemispheres
+        "hemispheres": hemispheres
     }
 
     browser.quit()

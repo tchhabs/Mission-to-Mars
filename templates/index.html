@@ -18,28 +18,37 @@
 
     <div class="row">
       <div class="col-md-12">
-        <h1>Latest Mars News</h1>
-        <h2 style="text-decoration: underline;">{{ mars_info.newstitle }}</h2>
-        <h3>{{ mars_info.newsbody }}</h3>
+        <h1><strong>Latest Mars News</strong></h1>
+        <h2>{{ mars_info.news_title }}</h2>
+        <h3>{{ mars_info.news_p}}</h3>
       </div>
     </div>
 
-    <div class="row d-flex justify-content-center" style="margin-top: 20px;">
+    <div class="row justify-content-center" style="margin-top: 20px;">
       <div class="col-md-7">
-        <h2>Featured Mars Image<hr/></h2>
-        <img src="{{ mars_info.featured_image_url }}" alt="Mars" class="img-fluid">
+        <h2>Featured Mars Image</h2>
+        <img src="{{ mars_info.featured_image_url }}" alt="Mars" class="img-fluid" width= '800px' height= '600px'>
       </div>
-        <div class="card-body" style="border: solid; margin-top: 20px;">
-          <h4 class="card-title">Mars Fun Facts!</h4>
-          {{ mars_info.mars_table_html|safe }}
-        </div>
-      </div>
+  
+  <div class="col-md-4">
+    <div class="card-body">
+      <h4 class="card-title">Current Weather on Mars:<hr/></h4>
+      <p class="card-text">
+        {{ mars_info.mars_weather}}
+      </p>
+    </div>
+    <br>
+    <div class="card-body" margin-top: 20px;>
+      <h4 class="card-title">Mars Fun Facts!</h4>
+      {{ mars_info.mars_table_html|safe }}
     </div>
   </div>
-  
-  <div class="row dont-pad-me comparison-charts" style="margin-top: 40px; margin-bottom: 20px;">
+</div>
+</div>
+
+  <div class="row comparison-charts" style="margin-top: 40px; margin-bottom: 20px;">
     <div class="container">
-        <div> <h1 class="text-center">Mars Hemispheres<hr/></h1></div>
+        <div> <h1 class="text-center">Mars Hemispheres</h1></div>
         <div class="col-sm-12 col-md-6 col-lg-6 text-center">
             <h3 style="text-align: center; padding-top: 10px;">{{ mars_info.hemisphers[0].title }}</h3>
             <img mg src="{{ mars_info.hemisphers[0].img_url }}" alt="Cerberus Hemisphere" class="img-responsive viz-links img-fluid comparison-images">
